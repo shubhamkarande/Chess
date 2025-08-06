@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="game-header">
+        <h1>Chess Game</h1>
+        <div class="game-controls">
+          <button id="newGame">New Game</button>
+          <button id="undoMove">Undo Move</button>
+          <button id="toggleSound">Sound: ON</button>
+          <button id="toggleGameMode">vs Computer</button>
+        </div>
+      </div>
+
+      <div class="game-info">
+        <div class="player-info">
+          <div class="current-player">
+            <span id="currentPlayer">White</span>'s Turn
+          </div>
+          <div class="game-mode" id="gameMode">Player vs Player</div>
+          <div class="game-status" id="gameStatus">Game in progress</div>
+          <div class="ai-thinking" id="aiThinking" style="display: none">
+            <div class="thinking-spinner"></div>
+            Computer is thinking...
+          </div>
+        </div>
+        <div class="captured-pieces">
+          <div class="captured-white">
+            <h3>Captured White Pieces</h3>
+            <div id="capturedWhite"></div>
+          </div>
+          <div class="captured-black">
+            <h3>Captured Black Pieces</h3>
+            <div id="capturedBlack"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chess-board" id="chessBoard"></div>
+
+      <div class="move-history">
+        <h3>Move History</h3>
+        <div id="moveList"></div>
+      </div>
+    </div>
+
+    <script src="chess.js"></script>
+  </body>
+</html>
